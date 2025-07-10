@@ -1,41 +1,50 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package RegistroElectoral;
 
-/**
- *
- * @author cecam
- */
-public class Candidato extends Persona {
+public class Candidato extends Persona implements Registro 
+{
+    private int dni;
+    private PartidoPolitico partido;
 
-    protected String PartidoPolitico;
-
-    public Candidato(String PartidoPolitico, int DNI, String Nombre, String Apellido) {
-        super(DNI, Nombre, Apellido);
-        this.PartidoPolitico = PartidoPolitico;
+    public Candidato(String nombre, String apellido, int dni, PartidoPolitico partido) {
+        super(nombre, apellido);
+        this.dni = dni;
+        this.partido = partido;
     }
 
-    public String getPartidoPolitico() {
-        return PartidoPolitico;
+    public int getDni() {
+        return dni;
     }
 
-    public void setPartidoPolitico(String PartidoPolitico) {
-        this.PartidoPolitico = PartidoPolitico;
+    public void setDni(int dni) {
+        this.dni = dni;
     }
 
-    public void modificarCandidato(int DNI) {
-
+    public PartidoPolitico getPartido() {
+        return partido;
     }
-    public void eliminarCandidato(int DNI) {
 
+    public void setPartido(PartidoPolitico partido) {
+        this.partido = partido;
+    }
+    
+    //Interfaz
+     @Override
+    public void Registrar()
+    {
+        System.out.println("Candidato registrado : " + nombre + " " + apellido);
     }
 
     @Override
-    public String VerInfo() {
-        return super.VerInfo() + "\nPartido político: " + this.PartidoPolitico;
-
+    public void Modificar() 
+    {
+        System.out.println("Candidato modificado : " + nombre + " " + apellido);
     }
 
+    @Override
+    public void Eliminar()
+    {
+        System.out.println("Candidato eliminado : " + nombre + " " + apellido);
+    }
+    
 }
