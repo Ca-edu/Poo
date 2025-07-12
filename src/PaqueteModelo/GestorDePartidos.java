@@ -51,7 +51,7 @@ public class GestorDePartidos
         {
             if (listaPartidos[i].getNombre().equals(nombreBuscar)) 
             {
-                // Desplazar a la izquierda
+
                 for (int j = i; j < cantidad - 1; j++) 
                 {
                     listaPartidos[j] = listaPartidos[j + 1];

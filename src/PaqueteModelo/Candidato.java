@@ -28,7 +28,6 @@ public class Candidato extends Persona implements Registro
         this.partido = partido;
     }
     
-    //Interfaz
      @Override
     public void Registrar()
     {

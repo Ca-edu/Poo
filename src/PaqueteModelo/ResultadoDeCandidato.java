@@ -6,13 +6,12 @@ public class ResultadoDeCandidato
     private Candidato candidato;
     private int votos;
 
-    // cosntructor
+
     public ResultadoDeCandidato(Candidato candidato, int votos) {
         this.candidato = candidato;
         this.votos = votos;
     }
 
-    // getters setters
     public Candidato getCandidato() {
         return candidato;
     }

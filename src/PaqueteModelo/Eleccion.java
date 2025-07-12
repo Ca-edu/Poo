@@ -3,15 +3,13 @@ package PaqueteModelo;
 
 public class Eleccion {
 
-    // stributos
     private String fecha;
-    private String tipo; // municipal, nacional, referéndum
+    private String tipo; 
     private Candidato[] candidatos;
     private MesaElectoral[] mesas;
     private int cantidadCandidatos;
     private int cantidadMesas;
 
-    // constructor
     public Eleccion(String fecha, String tipo, int maxCandidatos, int maxMesas) {
         this.fecha = fecha;
         this.tipo = tipo;
